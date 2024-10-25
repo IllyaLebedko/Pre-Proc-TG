@@ -1,9 +1,17 @@
 import tkinter as tk
 from tkinter import filedialog
+import csv
 
 file_path = filedialog.askopenfilename()
 
+time = []
+value = []
 
+with open(file_path, newline='') as file:
+    reader = csv.reader(file,delimiter=';')
+    for row in reader:
+        time.append(row[0])
+        value.append(row[1])
 
 a = [0.025, 0.05, 0.075]
 b = [1.64, 1.64, 1.64]
@@ -16,3 +24,5 @@ def squareTriangle():
 a = squareTriangle()
 print(a)
 print(file_path)
+print(time)
+print(value)
