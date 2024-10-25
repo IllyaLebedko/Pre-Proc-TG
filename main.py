@@ -1,3 +1,10 @@
+import tkinter as tk
+from tkinter import filedialog
+
+file_path = filedialog.askopenfilename()
+
+
+
 a = [0.025, 0.05, 0.075]
 b = [1.64, 1.64, 1.64]
 
@@ -8,3 +15,4 @@ def squareTriangle():
 
 a = squareTriangle()
 print(a)
+print(file_path)
